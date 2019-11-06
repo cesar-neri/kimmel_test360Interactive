@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test | Marzipano</title>
+<meta name="description" content="Display a single-resolution cubemap image." />
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style>@-ms-viewport { width: device-width; }</style>
+<link rel="stylesheet" href="http://www.marzipano.net/demos/common/reset.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+</style>
+</head>
+<body>
+
+<div id="pano"></div>
+
+<script src="http://www.marzipano.net/demos/common/es5-shim.js"></script>
+<script src="http://www.marzipano.net/demos/common/eventShim.js"></script>
+<script src="http://www.marzipano.net/demos/common/requestAnimationFrame.js" ></script>
+<script src="marzipano.js" ></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="height2.js"></script>
+
+
+<!-- Three Circles Hotspot -->
+<div id="threecircles2" data-toggle="modal" data-target="#exampleModalCenter">
+    <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+        <g fill="white" fill-rule="evenodd">
+            <g transform="translate(1 1)" stroke-width="2">
+                <circle cx="5" cy="50" r="5">
+                    <animate attributeName="cy"
+                         begin="0s" dur="4s"
+                         values="50;5;50;50"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                    <animate attributeName="cx"
+                         begin="0s" dur="4s"
+                         values="5;27;49;5"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                </circle>
+                <circle cx="27" cy="5" r="5">
+                    <animate attributeName="cy"
+                         begin="0s" dur="4s"
+                         from="5" to="5"
+                         values="5;50;50;5"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                    <animate attributeName="cx"
+                         begin="0s" dur="4s"
+                         from="27" to="27"
+                         values="27;49;5;27"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                </circle>
+                <circle cx="49" cy="50" r="5">
+                    <animate attributeName="cy"
+                         begin="0s" dur="4s"
+                         values="50;50;5;50"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                    <animate attributeName="cx"
+                         from="49" to="49"
+                         begin="0s" dur="4s"
+                         values="49;5;27;49"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                </circle>
+            </g>
+        </g>
+    </svg>
+  </a>
+</div>
+
+
+
+<div id="siteheader">NYU LANGONE 360 TEST</div>
+
+<span id="heightTitle">HEIGHT:</span>
+
+<a href="height3.html"><div class="heightToggle" id="height3">3</div></a>
+
+<div class="heightToggleActive" id="height2">2</div>
+
+<a href="index.html"><div class="heightToggle" id="height1">1</div></a>
+
+<span id="coordinates">click to obtain coordinates</span>
+
+</body>
+</html>
